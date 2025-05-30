@@ -35,7 +35,7 @@ To bridge the gap between theory and real-world hardware, the following table ma
 
 ## 🎬 Live Demonstration
 
-![AND Gate Visualization](./public/AndGateGif.gif)
+![AND Gate Visualization](./public/AndGateGif3.gif)
 
 This animation demonstrates how the app responds to input toggles, visually simulating the flow of binary logic through an AND gate.
 
