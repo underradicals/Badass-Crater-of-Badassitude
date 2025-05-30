@@ -1,0 +1,31 @@
+.truth-table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  font-family: 'Roboto-Mono', monospace;
+  text-align: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+  & tr {
+    border: 1px solid #c6c2c2;
+  }
+
+  & tr[data-active] {
+    background-color: #0088ff;
+    color: white;
+
+    & td {
+      border: 1px solid #0088ff;
+      ;
+    }
+  }
+
+  & td {
+    border: 1px solid #c6c2c2;
+    padding: 1rem;
+  }
+
+  & td:last-child {
+    width: 75px;
+
+  }
+}

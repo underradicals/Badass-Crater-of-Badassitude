@@ -1,0 +1,10 @@
+:root {
+  --fill-color: #444;
+  --second-color: goldenrod;
+  --first-color: #ffff00b3;
+  --first-std: 4;
+  --position: 90px;
+  --bg-primary: whitesmoke;
+
+  --duration: 0.5s
+}

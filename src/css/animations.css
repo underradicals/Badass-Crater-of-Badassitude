@@ -1,0 +1,78 @@
+@keyframes grow {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes shrink {
+  0% {
+    width: 100%;
+  }
+
+  100% {
+    width: 0;
+  }
+}
+
+
+@keyframes glow {
+  0% {
+    fill: #444;
+  }
+
+  100% {
+    fill: #d3ff00;
+  }
+}
+
+@keyframes fadeout {
+  0% {
+    fill: #d3ff00;
+  }
+
+  100% {
+    fill: #444;
+  }
+}
+
+
+.grow {
+  animation-name: grow;
+  animation-duration: var(--duration);
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.grow-delay {
+  animation-name: grow;
+  animation-duration: var(--duration);
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: var(--duration);
+}
+
+.shrink {
+  animation-name: shrink;
+  animation-duration: var(--duration);
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.glow {
+  animation-name: glow;
+  animation-timing-function: ease-in-out;
+  animation-duration: var(--duration);
+  animation-fill-mode: forwards;
+  animation-delay: var(--duration);
+}
+
+.fadeout {
+  animation-name: fadeout;
+  animation-timing-function: ease-in-out;
+  animation-duration: var(--duration);
+  animation-fill-mode: forwards;
+}

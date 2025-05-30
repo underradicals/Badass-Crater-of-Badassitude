@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>N Bit Adder</title>
+</head>
+
+<body>
+  <h1 class="title">Logical AND Gate Visualization</h1>
+  <div id="app">
+
+    <div class="math-bar">
+      <p>A: <span>0</span></p>
+      <p>B: <span>0</span></p>
+      <p>&equals; </p>
+      <p>C: <span>0</span></p>
+    </div>
+    <div class="truth-table-container">
+      <p class="icon-container">
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+          <path
+            d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
+        </svg>
+      </p>
+      <table class="truth-table">
+        <tr>
+          <th>A</th>
+          <th>B</th>
+          <th>A &and; B</th>
+        </tr>
+        <tr>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>0</td>
+          <td>1</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>0</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>1</td>
+          <td>1</td>
+        </tr>
+      </table>
+    </div>
+    <section class="half-adder-container">
+
+      <!-- Info Icon Container -->
+
+      <section class="info-icon-container">
+        <svg data-type="circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+          <path data-type="circle-path"
+            d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z" />
+        </svg>
+        <svg data-type="letter" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512">
+          <path
+            d="M48 80a48 48 0 1 1 96 0A48 48 0 1 1 48 80zM0 224c0-17.7 14.3-32 32-32l64 0c17.7 0 32 14.3 32 32l0 224 32 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 512c-17.7 0-32-14.3-32-32s14.3-32 32-32l32 0 0-192-32 0c-17.7 0-32-14.3-32-32z" />
+        </svg>
+      </section>
+
+      <!-- Info Icon Container -->
+
+
+      <div class="and-gate">
+        <h2>And Gate</h2>
+      </div>
+      <div class="a-input input">
+        <div class="a-gauge"></div>
+      </div>
+      <div class="b-input input">
+        <div class="b-gauge"></div>
+      </div>
+      <p class="a-switch switch">A</p>
+      <p class="b-switch switch">B</p>
+      <div class="bulb-container">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="auto"
+          height="200" viewBox="0 0 32 32" data-tags="lamp,light">
+          <defs>
+            <filter id="glow">
+              <!-- Base soft white glow -->
+              <feGaussianBlur stdDeviation="30" result="blur1" />
+              <feMerge result="merged1">
+                <feMergeNode in="blur1" />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+
+              <!-- Yellow glow -->
+              <feGaussianBlur stdDeviation="4" result="blur2" />
+              <feFlood flood-color="var(--first-color)" result="color1" />
+              <feComposite in="color1" in2="blur2" operator="in" result="glow1" />
+
+              <!-- Goldenrod glow -->
+              <feGaussianBlur stdDeviation="15" result="blur3" />
+              <feFlood flood-color="var(--second-color)" result="color2" />
+              <feComposite in="color2" in2="blur3" operator="in" result="glow2" />
+
+              <!-- Merge all layers -->
+              <feMerge>
+                <feMergeNode in="glow1" />
+                <feMergeNode in="glow2" />
+                <feMergeNode in="merged1" />
+              </feMerge>
+            </filter>
+          </defs>
+          <g transform="scale(0.03125 0.03125)">
+            <path
+              d="M681.76 300.96c17.056-4.608 27.2-22.112 22.624-39.2-4.576-17.088-22.112-27.232-39.2-22.624l-322.912 99.36c-17.088 4.576-27.2 22.112-22.656 39.2 4.576 17.056 22.112 27.232 39.2 22.624l26.656-8.192 30.528 55.616h-32c-35.328 0-64 28.672-64 64v133.344l64 90.656h256l64-90.656v-133.344c0-35.328-28.672-64-64-64h-32l64.48-143.936 9.28-2.848zM544 447.744h-64l-39.776-72.448 158.016-48.64-54.24 121.088zM665.184 143.168l-322.912 99.36c-17.088 4.576-27.2 22.112-22.656 39.2 4.576 17.056 22.112 27.232 39.2 22.624l322.912-99.36c17.056-4.608 27.2-22.112 22.624-39.2s-22.112-27.232-39.168-22.624zM358.816 208.352l322.912-99.36c17.056-4.608 27.2-22.112 22.624-39.2-4.576-17.088-22.112-27.232-39.2-22.624l-322.88 99.36c-17.088 4.576-27.2 22.112-22.656 39.2 4.576 17.056 22.144 27.2 39.2 22.624zM624 767.744h-224c-8.832 0-16 7.168-16 16s7.168 16 16 16h224c8.8 0 16-7.168 16-16s-7.2-16-16-16zM624 831.744h-224c-8.832 0-16 7.168-16 16s7.168 16 16 16h224c8.8 0 16-7.168 16-16s-7.2-16-16-16zM624 895.744h-224c-8.832 0-16 7.168-16 16s7.168 16 16 16h224c8.8 0 16-7.168 16-16s-7.2-16-16-16zM464 959.744c-3.232 26.304 21.504 48 48 48s48-21.504 48-48c0 1.376-96 3.392-96 0zM360.672 113.792l213.76-66.976c16.864-5.28 26.24-23.264 20.96-40.096-5.28-16.864-23.232-26.272-40.096-20.992l-213.76 66.976c-16.864 5.28-26.24 23.264-20.96 40.128 5.28 16.832 23.232 26.24 40.096 20.96z" />
+          </g>
+        </svg>
+      </div>
+      <div class="output">
+        <div class="c-gauge"></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Dialog Element -->
+
+  <dialog class="info-modal">
+    <div class="close-button-container">
+      <p class="close-button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+          <path
+            d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+        </svg>
+      </p>
+    </div>
+    <p>
+      A <span class="bold">Logic Gate</span> is an abstraction on top of a digital circuit. A Logic Gate acts as a type
+      of switch. There are many
+      types of switches in the world of Digital Circuits: <span class="bold">Mechanical Switches</span>, used in early
+      computers;
+      <span class="bold">Electromechanical Switches</span> were used in telephone switching systems; <span
+        class="bold">Electronic Switches (Semiconductor-Based)</span> lay
+      the foundation of modern logic gates, of which there many as well: There are transistors, diodes, optical
+      switches, and even newer still are the Quantum and Spintronic Switches that operate on spin states.
+      The type of switch demonstrated here is an <span class="bold">conjunctive switch</span> also called an <span
+        class="bold">AND Gate</span>: This means the gate is
+      closed if and only if both inputs are &quot;on&quot;. Otherwise the switch (circuit) is open and no current is
+      being allowed through. Logic Gates are closely related to a branch of mathematics called Boolean Algebra. Other
+      types of Logic Gates include: <span class="bold">OR Gate</span>, <span class="bold">XOR Gate</span>, <span
+        class="bold">NAND Gate</span> etc.
+    </p>
+  </dialog>
+
+  <!-- Dialog Element -->
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
+
+<!-- #5d5541d9, #daa520, filter="url(#glow)"-->
