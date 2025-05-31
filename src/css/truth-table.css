@@ -1,8 +1,23 @@
+.rounded {
+  border-collapse: separate;
+  border-radius: 6px;
+}
+
+th {
+  border-top: none;
+}
+
+td:first-child,
+th:first-child {
+  border-left: none;
+}
+
 .truth-table {
   margin: 0 auto;
   border-collapse: collapse;
   font-family: 'Roboto-Mono', monospace;
   text-align: center;
+  border-radius: 6px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 
   & tr {
@@ -15,12 +30,12 @@
 
     & td {
       border: 1px solid #0088ff;
-      ;
     }
   }
 
   & td {
-    border: 1px solid #c6c2c2;
+    border-left: 1px solid #c6c2c2;
+    border-bottom: 1px solid #c6c2c2;
     padding: 1rem;
   }
 
@@ -28,4 +43,5 @@
     width: 75px;
 
   }
+
 }
